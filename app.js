@@ -23,6 +23,7 @@ const resizedSize = document.getElementById("resizedSize");
 const resizedResolution = document.getElementById("resizedResolution");
 const savedPercent = document.getElementById("savedPercent");
 let currentImage = null;
+let currentFile = null;
 let originalWidth = 0;
 let originalHeight = 0;
 // ==========================
@@ -41,6 +42,7 @@ chooseImage.addEventListener("click", () => {
 imageInput.addEventListener("change", () => {
 
     const file = imageInput.files[0];
+    currentFile = file;
 
     if (!file) return;
 
@@ -122,9 +124,26 @@ resizeBtn.addEventListener("click", () => {
 
     const resizedData = canvas.toDataURL("image/png");
 
-    resizedPreview.src = resizedData;
+resizedPreview.src = resizedData;
 
-    downloadBtn.style.display = "inline-block";
+// معلومات الصورة الجديدة
+
+const resizedSizeBytes =
+    Math.round((resizedData.length * 3) / 4);
+
+resizedSize.textContent =
+    "Size: " + (resizedSizeBytes / 1024).toFixed(1) + " KB";
+
+resizedResolution.textContent =
+    "Resolution: " + canvas.width + " × " + canvas.height;
+
+const percent =
+    ((currentfile.size - resizedSizeBytes) / file.size) * 100;
+
+savedPercent.textContent =
+    "Saved: " + percent.toFixed(1) + "%";
+
+downloadBtn.style.display = "inline-block";
 
 });
 // ==========================
