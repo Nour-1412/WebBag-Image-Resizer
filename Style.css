@@ -1,3 +1,68 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f4f7fb;
+
+    color:#222;
+
+    line-height:1.6;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+.hero{
+
+    text-align:center;
+
+    padding:70px 20px 40px;
+
+}
+
+.hero h1{
+
+    font-size:52px;
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:20px;
+
+}
 /*==========================
 UPLOAD SECTION
 ==========================*/
