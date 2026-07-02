@@ -503,3 +503,54 @@ MOBILE RESPONSIVE
 }
 
 }
+/*==========================
+LOADING
+==========================*/
+
+.loading-box{
+
+    display:none;
+
+    text-align:center;
+
+    margin:25px 0;
+
+}
+
+.loader{
+
+    width:45px;
+
+    height:45px;
+
+    margin:auto;
+
+    border:5px solid #e5e7eb;
+
+    border-top:5px solid #2563eb;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+.loading-box p{
+
+    margin-top:15px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
