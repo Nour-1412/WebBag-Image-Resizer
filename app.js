@@ -15,7 +15,13 @@ const keepRatio = document.getElementById("keepRatio");
 
 const resizeBtn = document.getElementById("resizeBtn");
 const downloadBtn = document.getElementById("downloadBtn");
+const originalSize = document.getElementById("originalSize");
+const originalResolution = document.getElementById("originalResolution");
+const originalFormat = document.getElementById("originalFormat");
 
+const resizedSize = document.getElementById("resizedSize");
+const resizedResolution = document.getElementById("resizedResolution");
+const savedPercent = document.getElementById("savedPercent");
 let currentImage = null;
 let originalWidth = 0;
 let originalHeight = 0;
@@ -46,17 +52,28 @@ imageInput.addEventListener("change", () => {
 
         img.onload = function(){
 
-            currentImage = img;
+    currentImage = img;
 
-            originalWidth = img.width;
-            originalHeight = img.height;
+    originalWidth = img.width;
+    originalHeight = img.height;
 
-            resizeWidth.value = originalWidth;
-            resizeHeight.value = originalHeight;
+    resizeWidth.value = originalWidth;
+    resizeHeight.value = originalHeight;
 
-            originalPreview.src = e.target.result;
+    originalPreview.src = e.target.result;
 
-        };
+    // Original Info
+
+    originalSize.textContent =
+        "Size: " + (file.size / 1024).toFixed(1) + " KB";
+
+    originalResolution.textContent =
+        "Resolution: " + img.width + " × " + img.height;
+
+    originalFormat.textContent =
+        "Format: " + file.type.replace("image/","").toUpperCase();
+
+};
 
         img.src = e.target.result;
 
