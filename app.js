@@ -4,7 +4,7 @@
 
 const imageInput = document.getElementById("imageInput");
 const chooseImage = document.getElementById("chooseImage");
-
+const dropArea = document.getElementById("dropArea");
 const originalPreview = document.getElementById("originalPreview");
 const resizedPreview = document.getElementById("resizedPreview");
 
@@ -191,6 +191,68 @@ if (formatSelect.value === "image/webp") {
 link.download = "resized-image." + extension;
 
     link.click();
+
+});
+// ==========================
+// DRAG & DROP
+// ==========================
+
+// منع المتصفح من فتح الصورة
+
+["dragenter", "dragover", "dragleave", "drop"].forEach(eventName => {
+
+    dropArea.addEventListener(eventName, e => {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+    });
+
+});
+
+// عند دخول الصورة
+
+["dragenter", "dragover"].forEach(eventName => {
+
+    dropArea.addEventListener(eventName, () => {
+
+        dropArea.classList.add("dragging");
+
+    });
+
+});
+
+// عند الخروج
+
+["dragleave", "drop"].forEach(eventName => {
+
+    dropArea.addEventListener(eventName, () => {
+
+        dropArea.classList.remove("dragging");
+
+    });
+
+});
+
+// عند إفلات الصورة
+
+dropArea.addEventListener("drop", e => {
+
+    const file = e.dataTransfer.files[0];
+
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+
+        alert("Please drop an image.");
+
+        return;
+
+    }
+
+    imageInput.files = e.dataTransfer.files;
+
+    imageInput.dispatchEvent(new Event("change"));
 
 });
 
