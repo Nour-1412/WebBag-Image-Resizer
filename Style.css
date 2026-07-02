@@ -355,3 +355,27 @@ body{
     color:#2563eb !important;
     font-size:52px !important;
 }
+
+/*==========================
+IMAGE INFO
+==========================*/
+
+.image-info{
+
+    margin:15px 0;
+
+    text-align:left;
+
+}
+
+.image-info p{
+
+    margin:6px 0;
+
+    color:#555;
+
+    font-size:15px;
+
+    font-weight:600;
+
+   }
