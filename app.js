@@ -114,7 +114,21 @@ resizeBtn.addEventListener("click", () => {
 // DOWNLOAD
 // ==========================
 
+// ==========================
+// DOWNLOAD
+// ==========================
+
 downloadBtn.addEventListener("click", () => {
+
+    const link = document.createElement("a");
+
+    link.href = resizedPreview.src;
+
+    link.download = "resized-image.png";
+
+    link.click();
+
+});
 
     
 
