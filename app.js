@@ -150,7 +150,7 @@ resizedSize.textContent =
 
 resizedResolution.textContent =
     "Resolution: " + canvas.width + " × " + canvas.height;
-alert(currentFile);
+
 const percent =
     ((currentFile.size - resizedSizeBytes) / currentFile.size) * 100;
 
