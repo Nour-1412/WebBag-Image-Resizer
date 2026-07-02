@@ -1,0 +1,173 @@
+<section class="hero">
+
+    <h1>
+
+        Image Resizer
+
+    </h1>
+
+    <p>
+
+        Resize JPG, PNG and WEBP images online for free without losing quality.
+
+    </p>
+
+</section>
+<section class="upload-section">
+
+    <div class="upload-card">
+
+        <div class="upload-header">
+
+            <h2>
+                Upload Image
+            </h2>
+
+            <span class="badge">
+                Free Tool
+            </span>
+
+        </div>
+
+        <div
+            id="dropArea"
+            class="drop-area">
+
+            <div class="upload-icon">
+
+                🖼️
+
+            </div>
+
+            <h3>
+
+                Drag & Drop your image here
+
+            </h3>
+
+            <p>
+
+                or
+
+            </p>
+
+            <button
+                id="chooseImage"
+                class="choose-btn">
+
+                Choose Image
+
+            </button>
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/png,image/jpeg,image/webp"
+                hidden>
+
+            <small>
+
+                JPG • PNG • WEBP
+
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="resize-controls">
+
+    <div class="control-box">
+
+        <label>
+
+            Width (px)
+
+        </label>
+
+        <input
+            type="number"
+            id="resizeWidth">
+
+    </div>
+
+    <div class="control-box">
+
+        <label>
+
+            Height (px)
+
+        </label>
+
+        <input
+            type="number"
+            id="resizeHeight">
+
+    </div>
+
+    <div class="checkbox-box">
+
+        <input
+            type="checkbox"
+            id="keepRatio"
+            checked>
+
+        <label for="keepRatio">
+
+            Keep Aspect Ratio
+
+        </label>
+
+    </div>
+
+</section>
+<section class="preview-section">
+
+    <div class="preview-card">
+
+        <h3>
+
+            Original Image
+
+        </h3>
+
+        <img
+            id="originalPreview">
+
+    </div>
+
+    <div class="preview-card">
+
+        <h3>
+
+            Resized Image
+
+        </h3>
+
+        <img
+            id="resizedPreview">
+
+    </div>
+
+</section>
+<section class="action-section">
+
+    <button
+        id="resizeBtn"
+        class="btn-primary">
+
+        Resize Image
+
+    </button>
+
+    <button
+        id="downloadBtn"
+        class="btn-success">
+
+        Download Image
+
+    </button>
+
+  </section>
+
