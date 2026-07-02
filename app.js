@@ -20,6 +20,7 @@ const keepRatio = document.getElementById("keepRatio");
 const formatSelect = document.getElementById("formatSelect");
 const resizeBtn = document.getElementById("resizeBtn");
 const downloadBtn = document.getElementById("downloadBtn");
+const resetBtn = document.getElementById("resetBtn");
 const loadingBox = document.getElementById("loadingBox");
 const originalSize = document.getElementById("originalSize");
 const originalResolution = document.getElementById("originalResolution");
@@ -264,6 +265,38 @@ dropArea.addEventListener("drop", e => {
     imageInput.dispatchEvent(new Event("change"));
 
 });
+// ==========================
+// RESET
+// ==========================
 
+resetBtn.addEventListener("click", () => {
+
+    imageInput.value = "";
+
+    currentImage = null;
+
+    currentFile = null;
+
+    originalPreview.src = "";
+
+    resizedPreview.src = "";
+
+    resizeWidth.value = "";
+
+    resizeHeight.value = "";
+
+    resizedSize.textContent = "";
+
+    resizedResolution.textContent = "";
+
+    savedPercent.textContent = "";
+
+    downloadBtn.style.display = "none";
+
+    downloadBtn.disabled = true;
+
+    resizeBtn.disabled = true;
+
+});
     
 
