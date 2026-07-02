@@ -76,6 +76,7 @@ imageInput.addEventListener("change", () => {
     resizeHeight.value = originalHeight;
 
     originalPreview.src = e.target.result;
+      resizeBtn.disabled = false;      
 
     // Original Info
 
@@ -164,6 +165,7 @@ savedPercent.textContent =
     "Saved: " + percent.toFixed(1) + "%";
 
 downloadBtn.style.display = "inline-block";
+    downloadBtn.disabled = false;
     loadingBox.style.display = "none";
 
 });
