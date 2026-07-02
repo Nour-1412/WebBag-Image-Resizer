@@ -22,6 +22,13 @@ const originalFormat = document.getElementById("originalFormat");
 const resizedSize = document.getElementById("resizedSize");
 const resizedResolution = document.getElementById("resizedResolution");
 const savedPercent = document.getElementById("savedPercent");
+const qualityRange = document.getElementById("qualityRange");
+const qualityValue = document.getElementById("qualityValue");
+qualityRange.addEventListener("input", () => {
+
+    qualityValue.textContent = qualityRange.value + "%";
+
+});
 let currentImage = null;
 let currentFile = null;
 let originalWidth = 0;
