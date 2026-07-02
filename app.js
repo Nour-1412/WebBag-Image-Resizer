@@ -20,6 +20,7 @@ const keepRatio = document.getElementById("keepRatio");
 const formatSelect = document.getElementById("formatSelect");
 const resizeBtn = document.getElementById("resizeBtn");
 const downloadBtn = document.getElementById("downloadBtn");
+const loadingBox = document.getElementById("loadingBox");
 const originalSize = document.getElementById("originalSize");
 const originalResolution = document.getElementById("originalResolution");
 const originalFormat = document.getElementById("originalFormat");
@@ -125,7 +126,7 @@ resizeBtn.addEventListener("click", () => {
     canvas.height = Number(resizeHeight.value);
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+loadingBox.style.display = "block";
     ctx.drawImage(
         currentImage,
         0,
@@ -163,6 +164,7 @@ savedPercent.textContent =
     "Saved: " + percent.toFixed(1) + "%";
 
 downloadBtn.style.display = "inline-block";
+    loadingBox.style.display = "none";
 
 });
 // ==========================
