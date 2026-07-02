@@ -411,3 +411,95 @@ DRAGGING
     transform:scale(1.02);
 
    }
+/*==========================
+MOBILE RESPONSIVE
+==========================*/
+
+@media (max-width:768px){
+
+.hero{
+
+    padding:45px 20px 25px;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+}
+
+.upload-card{
+
+    padding:22px;
+
+}
+
+.upload-header{
+
+    flex-direction:column;
+
+    gap:15px;
+
+    text-align:center;
+
+}
+
+.drop-area{
+
+    padding:40px 15px;
+
+}
+
+.upload-icon{
+
+    font-size:55px;
+
+}
+
+.preview-section{
+
+    grid-template-columns:1fr;
+
+}
+
+.preview-card img{
+
+    max-height:260px;
+
+}
+
+.action-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    padding:0 20px;
+
+}
+
+.btn-primary,
+.btn-success{
+
+    width:100%;
+
+    margin:0;
+
+}
+
+.resize-controls{
+
+    grid-template-columns:1fr;
+
+}
+
+}
