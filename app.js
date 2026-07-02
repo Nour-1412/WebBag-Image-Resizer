@@ -5,6 +5,11 @@
 const imageInput = document.getElementById("imageInput");
 const chooseImage = document.getElementById("chooseImage");
 const dropArea = document.getElementById("dropArea");
+dropArea.addEventListener("click", () => {
+
+    imageInput.click();
+
+});
 const originalPreview = document.getElementById("originalPreview");
 const resizedPreview = document.getElementById("resizedPreview");
 
