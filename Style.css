@@ -343,4 +343,15 @@ BUTTONS
     transform:translateY(-3px);
 
 }
+body{
+    background:#f4f7fb !important;
+}
 
+.hero{
+    text-align:center !important;
+}
+
+.hero h1{
+    color:#2563eb !important;
+    font-size:52px !important;
+}
