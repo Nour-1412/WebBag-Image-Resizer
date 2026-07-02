@@ -129,8 +129,13 @@ resizeBtn.addEventListener("click", () => {
         canvas.height
     );
 
-    const resizedData = canvas.toDataURL(
-    formatSelect.value
+    const quality = qualityRange.value / 100;
+
+const selectedFormat = formatSelect.value;
+
+const resizedData = canvas.toDataURL(
+    selectedFormat,
+    quality
 );
 
 resizedPreview.src = resizedData;
@@ -169,7 +174,21 @@ downloadBtn.addEventListener("click", () => {
 
     link.href = resizedPreview.src;
 
-    link.download = "resized-image.png";
+    let extension = "png";
+
+if (formatSelect.value === "image/jpeg") {
+
+    extension = "jpg";
+
+}
+
+if (formatSelect.value === "image/webp") {
+
+    extension = "webp";
+
+}
+
+link.download = "resized-image." + extension;
 
     link.click();
 
