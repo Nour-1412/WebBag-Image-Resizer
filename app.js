@@ -152,7 +152,7 @@ resizedResolution.textContent =
     "Resolution: " + canvas.width + " × " + canvas.height;
 
 const percent =
-    ((currentfile.size - resizedSizeBytes) / file.size) * 100;
+    ((currentFile.size - resizedSizeBytes) / currentFile.size) * 100;
 
 savedPercent.textContent =
     "Saved: " + percent.toFixed(1) + "%";
