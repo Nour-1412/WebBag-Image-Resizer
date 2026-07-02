@@ -126,4 +126,68 @@ downloadBtn.addEventListener("click", () => {
 
 });
 
+// ==========================
+// CANVAS
+// ==========================
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+// ==========================
+// RESIZE IMAGE
+// ==========================
+
+resizeBtn.addEventListener("click", () => {
+
+    if (!currentImage) {
+
+        alert("Please choose an image first.");
+
+        return;
+
+    }
+
+    canvas.width = Number(resizeWidth.value);
+
+    canvas.height = Number(resizeHeight.value);
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.drawImage(
+
+        currentImage,
+
+        0,
+
+        0,
+
+        canvas.width,
+
+        canvas.height
+
+    );
+
+    const resizedData = canvas.toDataURL("image/png");
+
+    resizedPreview.src = resizedData;
+
+    downloadBtn.style.display = "inline-block";
+
+});
+
+// ==========================
+// DOWNLOAD
+// ==========================
+
+downloadBtn.addEventListener("click", () => {
+
+    const link = document.createElement("a");
+
+    link.href = resizedPreview.src;
+
+    link.download = "resized-image.png";
+
+    link.click();
+
+});
 
