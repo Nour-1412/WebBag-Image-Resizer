@@ -554,3 +554,16 @@ LOADING
     }
 
 }
+/*==========================
+DISABLED BUTTONS
+==========================*/
+
+button:disabled{
+
+    opacity:.5;
+
+    cursor:not-allowed;
+
+    transform:none !important;
+
+}
