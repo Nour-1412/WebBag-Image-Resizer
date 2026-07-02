@@ -12,7 +12,7 @@ const resizeWidth = document.getElementById("resizeWidth");
 const resizeHeight = document.getElementById("resizeHeight");
 
 const keepRatio = document.getElementById("keepRatio");
-
+const formatSelect = document.getElementById("formatSelect");
 const resizeBtn = document.getElementById("resizeBtn");
 const downloadBtn = document.getElementById("downloadBtn");
 const originalSize = document.getElementById("originalSize");
@@ -122,7 +122,9 @@ resizeBtn.addEventListener("click", () => {
         canvas.height
     );
 
-    const resizedData = canvas.toDataURL("image/png");
+    const resizedData = canvas.toDataURL(
+    formatSelect.value
+);
 
 resizedPreview.src = resizedData;
 
