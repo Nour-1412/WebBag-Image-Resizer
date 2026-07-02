@@ -567,3 +567,32 @@ button:disabled{
     transform:none !important;
 
 }
+/*==========================
+RESET BUTTON
+==========================*/
+
+.btn-reset{
+
+    background:#ef4444;
+
+    color:#fff;
+
+    border:none;
+
+    padding:16px 40px;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    margin:10px;
+
+}
+
+.btn-reset:hover{
+
+    transform:translateY(-3px);
+
+}
