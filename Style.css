@@ -398,3 +398,16 @@ SELECT
     font-size:16px;
 
    }
+/*==========================
+DRAGGING
+==========================*/
+
+.drop-area.dragging{
+
+    border-color:#2563eb;
+
+    background:#eef5ff;
+
+    transform:scale(1.02);
+
+   }
